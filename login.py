@@ -7,8 +7,9 @@ class login:
         self.root.geometry("1199x600+100+50")
 
         #login frame
-        Frame_login=Frame(self.root,bg="Black")
+        Frame_login=Frame(self.root,bg="Red")
         Frame_login.place(x=150,y=150,height=340,width=500)
+                             
 
         title=Label(Frame_login,text="Login Here",font=("Impact",35,"bold"),fg="#d77336").place(x=90,y=30)
         desc= Label(Frame_login, text="Accountant Employee Login Area", font=("Goudy old style", 15, "bold"), fg="#d25d17").place(x=90, y=100)
@@ -23,7 +24,7 @@ class login:
 
         forget=Button(Frame_login,text="Forget Password?",cursor="hand2",bg="Black",fg="#d77337",bd=0,font=("times new roman",12)).place(x=90,y=280)
 
-        login_btn = Button(self.root,command=self.login_function(),cursor="hand2", text="Login", bg="Black", fg="#d77337",font=("times new roman", 20)).place(x=300, y=470,width=180,height=40)
+        login_btn = Button(self.root,command=self.login_function,cursor="hand2", text="Login", bg="Black", fg="#d77337",font=("times new roman", 20)).place(x=300, y=470,width=180,height=40)
 
     def login_function(self):
         if self.txt_pass.get()==""or self.txt_user.get()=="":
